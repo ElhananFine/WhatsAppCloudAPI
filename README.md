@@ -35,7 +35,14 @@ The messages listener emits an event when a message is received, whether it's a 
 The updates listener emits an event when an update message is received. For example, when a message is sent, received, read, or deleted by the user.
 Listening to these events is straightforward and can be done using the ``` client.on("event-name") ``` method. The listener emits a single object that can be received as a callback.
 
-In addition to listeners, the client exposes the `sendMessage` function. This function takes text or a media object and a phone number as parameters and sends the message to the client. It returns a promise (details will be provided in the documentation later).
+# Client:
+The `Whatsapp` object exposes the following functions:
+
+- `sendMessage`: This function is used to send a message. It accepts parameters for text or media, as well as a phone number. It sends the message to the client and returns an object with the message ID.
+
+- `uploadMedia`: The `uploadMedia` function receives information returned from the `downloadMedia` function when a media message is received. It uploads the media to WhatsApp. Optionally, you can pass a second boolean parameter indicating whether to save the file in the file system. The function returns the media ID (which is later sent in a media message to the client). If the second parameter is `true`, it also returns the path to the file in the file system.
+
+- `deleteMedia`: This function takes the media ID of the uploaded media and deletes it from WhatsApp's servers. It returns a success status.
 
 # Objects:
 
