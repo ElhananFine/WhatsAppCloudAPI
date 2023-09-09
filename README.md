@@ -36,7 +36,6 @@ The updates listener emits an event when an update message is received. For exam
 Listening to these events is straightforward and can be done using the ``` client.on("event-name") ``` method. The listener emits a single object that can be received as a callback.
 
 # Objects:
-Here's the translation of your documentation into English:
 
 **Message Object Contents:**
 - `from` - Sender's phone number (string)
@@ -58,6 +57,16 @@ Here's the translation of your documentation into English:
 - `markAsRead` - Marks the message as read.
 - `fastEmojiResponse` - Provides a quick response using an emoji as a reply. It only accepts emojis.
 - `downloadMedia` - Used to download media when dealing with media messages. Important: You should check if the media download was successful, or you will receive an error.
+
+Object `update` content:
+- `msgID`: The ID of the message for which the update is received (string).
+- `phoneNumberID`: Your phone's identifier (string).
+- `status`: The status of the update (e.g., message sent, read, etc.) (string).
+- `time`: The timestamp of when the message was received (date).
+- `recipient_id`: The ID of the recipient (string).
+- `pricing`: If the message involves payment, it contains an object with payment details (module, status, etc.). Otherwise, it contains an object with a `pricing` key indicating no payment is required (string).
+
+This object does not expose any functions.
 
 
 # Supported features
