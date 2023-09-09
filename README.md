@@ -35,6 +35,8 @@ The messages listener emits an event when a message is received, whether it's a 
 The updates listener emits an event when an update message is received. For example, when a message is sent, received, read, or deleted by the user.
 Listening to these events is straightforward and can be done using the ``` client.on("event-name") ``` method. The listener emits a single object that can be received as a callback.
 
+In addition to listeners, the client exposes the `sendMessage` function. This function takes text or a media object and a phone number as parameters and sends the message to the client. It returns a promise (details will be provided in the documentation later).
+
 # Objects:
 
 **Message Object Contents:**
