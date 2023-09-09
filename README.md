@@ -27,3 +27,7 @@ Client.on("messages", async (msg) => {
 Client.on("updates", async (update) => {});
 
 ```
+
+# Supported features
+
+# Contributing
