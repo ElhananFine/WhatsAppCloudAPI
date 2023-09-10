@@ -7,7 +7,7 @@
 # installation
 
 ```bash
-npm install whatsappapis
+npm i whapis
 ```
 
 # Setup and Usage
