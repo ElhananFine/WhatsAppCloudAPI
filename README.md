@@ -77,6 +77,35 @@ Object `update` content:
 
 This object does not expose any functions.
 
+# Object MessageMedia
+The library exposes MessageMedia objects, which can be used to construct media messages passed to the sendMessage, sendToNum, and reply functions.
+
+Existing media message objects:
+1. MessageText - Receives text content and an optional Boolean parameter for link previews.
+2. Image - Accepts an ID or link to an image.
+3. ReplyEmojiToMsg - Receives an emoji for quick responses to messages.
+4. Audio - Accepts a link or ID for audio.
+5. Document - Accepts a link or ID, along with optional parameters for caption and filename.
+6. Sticker - Accepts an ID or link.
+7. Video - Accepts an ID or link, along with an optional caption parameter.
+8. Location - Under development.
+9. Contacts - Under development.
+10. List / Buttons - Documentation in progress.
+
+Example: 
+```js
+MessageText("Text", true);
+Image(idOrLink);
+ReplyEmojyToMsg(emojy);
+audio(idOrLink);
+document(idOrLink, caption, filename);
+sticker(idOrLink);
+video(idOrLink, caption);
+
+// In Process
+new List(), new Buttoms(), contacts(), location()
+```
+
 
 **The continuation of documentation and development will be uploaded gradually. In the near future, I hope to upload several libraries, so stay tuned! 😃**
 
