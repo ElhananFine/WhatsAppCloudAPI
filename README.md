@@ -124,6 +124,8 @@ The library exposes the following helper functions:
 **The continuation of documentation and development will be uploaded gradually. In the near future, I hope to upload several libraries, so stay tuned! 😃**
 
 # Supported features
+
+# Contributing
 Pull requests are welcome! If you see something you'd like to add, please do. For drastic changes, please open an issue first.
 
 # Disclaimer
