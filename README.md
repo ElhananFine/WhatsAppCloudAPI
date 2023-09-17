@@ -106,6 +106,20 @@ video(idOrLink, caption);
 new List(), new Buttoms(), contacts(), location()
 ```
 
+# Helper Functions
+
+The library exposes the following helper functions:
+
+1. `parsePhoneNumbers` - This function takes a single parameter, which is a phone number in international format (you can use `msg.from`). The function returns an object that contains the following properties:
+   - `country` - The country to which the number belongs.
+   - `countryCallingCode` - The phone prefix for that country.
+   - `number` - The phone number.
+   - `formatNational` - The phone number in the local format of that country.
+   - `formatInternational` - The phone number in international format.
+   - `valid` - Indicates whether the phone number is valid.
+
+2. `isLinkOrID` - This function checks whether a specific input is a valid ID or a valid link for sending media on WhatsApp.
+
 
 **The continuation of documentation and development will be uploaded gradually. In the near future, I hope to upload several libraries, so stay tuned! 😃**
 
